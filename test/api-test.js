@@ -8,14 +8,10 @@ describe('NAT-UPNP/Client', function() {
   });
 
   it('should find router device', function(callback) {
-    c.addMapping({
-      remote: {
-        port: ~~(Math.random() * 65536)
-      },
-      internal: {
-        port: ~~(Math.random() * 65536)
-      },
-      ttl: 10
+    c.portMapping({
+      public: ~~(Math.random() * 65536),
+      private: ~~(Math.random() * 65536),
+      ttl: 5
     }, function(err) {
       assert.equal(err, null);
       callback();
