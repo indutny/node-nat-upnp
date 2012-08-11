@@ -4,8 +4,13 @@ var assert = require('assert'),
 
 describe('NAT-UPNP/Client', function() {
   var c;
+
   beforeEach(function() {
     c = natUpnp.createClient();
+  });
+
+  afterEach(function() {
+    c.close();
   });
 
   it('should add port mapping/unmapping', function(callback) {
