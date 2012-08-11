@@ -8,14 +8,19 @@ describe('NAT-UPNP/Client', function() {
     c = natUpnp.createClient();
   });
 
-  it('should add port mapping', function(callback) {
+  it('should add port mapping/unmapping', function(callback) {
+    var public = ~~(Math.random() * 65536);
     c.portMapping({
-      public: ~~(Math.random() * 65536),
+      public: public,
       private: ~~(Math.random() * 65536),
       ttl: 5
     }, function(err) {
       assert.equal(err, null);
-      callback();
+
+      c.portUnmapping({ public: public }, function(err) {
+        assert.equal(err, null);
+        callback();
+      });
     });
   });
 

@@ -10,11 +10,15 @@ var natUpnp = require('nat-upnp');
 var client = natUpnp.createClient();
 
 client.portMapping({
-  public: 12345
+  public: 12345,
   private: 54321,
   ttl: 10
 }, function(err) {
   // Will be called on success
+});
+
+client.portUnmapping({
+  public: 12345
 });
 
 client.externalIp(function(err, ip) {
