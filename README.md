@@ -7,12 +7,17 @@ Port mapping via UPnP APIs
 ```javascript
 var natUpnp = require('nat-upnp');
 
-natUpnp.createClient().portMapping({
+var client = natUpnp.createClient();
+
+client.portMapping({
   public: 12345
   private: 54321,
   ttl: 10
 }, function(err) {
   // Will be called on success
+});
+
+client.externalIp(function(err, ip) {
 });
 ```
 
