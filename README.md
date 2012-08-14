@@ -14,7 +14,7 @@ client.portMapping({
   private: 54321,
   ttl: 10
 }, function(err) {
-  // Will be called on success
+  // Will be called once finished
 });
 
 client.portUnmapping({
