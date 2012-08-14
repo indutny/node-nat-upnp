@@ -21,6 +21,12 @@ client.portUnmapping({
   public: 12345
 });
 
+client.getMappings(function(err, results) {
+});
+
+client.getMappings({ local: true }, function(err, results) {
+});
+
 client.externalIp(function(err, ip) {
 });
 ```
