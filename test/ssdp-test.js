@@ -1,5 +1,5 @@
-var assert = require('assert'),
-    natUpnp = require('..');
+var assert = require('assert');
+var natUpnp = require('..');
 
 describe('NAT-UPNP/Ssdp', function() {
   var c;

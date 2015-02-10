@@ -1,7 +1,7 @@
-var assert = require('assert'),
-    async = require('async'),
-    net = require('net'),
-    natUpnp = require('..');
+var assert = require('assert');
+var async = require('async');
+var net = require('net');
+var natUpnp = require('..');
 
 describe('NAT-UPNP/Client', function() {
   var c;
