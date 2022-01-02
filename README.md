@@ -2,6 +2,12 @@
 
 Port mapping via UPnP APIs
 
+## Installation
+
+```bash
+npm i git+https://github.com/kaden-sharpin/node-nat-upnp.git
+```
+
 ## Usage
 
 ```javascript
