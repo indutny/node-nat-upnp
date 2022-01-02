@@ -1,6 +1,6 @@
 {
   "name": "nat-upnp",
-  "version": "2.0",
+  "version": "2.0.0",
   "main": "build/src/index",
   "author": "Fedor Indutny <fedor@indutny.com>, SimplyLinn <https://github.com/SimplyLinn>, Kaden Sharpin <http://github.com/kaden-sharpin>",
   "homepage": "https://github.com/kaden-sharpin/node-nat-upnp",
